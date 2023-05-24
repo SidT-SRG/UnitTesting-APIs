@@ -1,0 +1,56 @@
+{
+    "ProfileId": "00af4b16-1208-4a2e-9bea-6b16fe23f0c5",
+    "TransactionNumber": "1680437312",
+    "TransactionDateTime": "{{TransactionDateTime}}",
+    "TransactionTypeCode": "PR",
+    "TransactionNetTotal": 120,
+    "CurrencyCode": "AUD",
+    "StoreCode": "P009",
+    "TransactionSourceCode": "ENABLER",
+    "ProgramCode": "REBEL",
+    "BrandOrgCode": "REBEL",
+    "JsonExternalData": {
+        "Temp_Ref_No": "31031016"
+    },
+    "TransactionDetails": [
+        {
+            "LineNumber": 1,
+            "ItemNumber": "58684703",
+            "ItemNumberTypeCode": "S",
+            "ItemTransactionTypeCode": "PR",
+            "Quantity": 1,
+            "DollarValueGross": 3,
+            "DollarValueNet": 3,
+            "DiscountAmount": 0,
+            "FullfillStoreCode": "P009"
+        },
+        {
+            "LineNumber": 2,
+            "ItemNumber": "SPO9138467",
+            "ItemNumberTypeCode": "S",
+            "ItemTransactionTypeCode": "PR",
+            "Quantity": 1,
+            "DollarValueGross": 4,
+            "DollarValueNet": 4,
+            "DiscountAmount": 0,
+            "FullfillStoreCode": "P009"
+        },
+        {
+            "LineNumber": 3,
+            "ItemNumber": "SPO9138468",
+            "ItemNumberTypeCode": "S",
+            "ItemTransactionTypeCode": "PR",
+            "Quantity": 1,
+            "DollarValueGross": 5,
+            "DollarValueNet": 5,
+            "DiscountAmount": 0,
+            "FullfillStoreCode": "P009"
+        }
+    ],
+    "Tenders": [
+        {
+            "TenderCode": "CASH",
+            "TenderAmount": 27.5
+        }
+    ]
+}

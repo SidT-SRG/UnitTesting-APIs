@@ -1,0 +1,12 @@
+{
+    "OrderDetails": [
+        {
+            "CertificateInd": true,
+            "JsonExternalData": {
+                "Temp_Ref_No": "31031016",
+                "TxnsSourceCode": "ENABLER",
+                "TotalDollarValueForBurn": 12.5
+            }
+        }
+    ]
+}

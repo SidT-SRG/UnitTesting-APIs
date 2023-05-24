@@ -1,0 +1,37 @@
+{
+    "ProfileId": "00af4b16-1208-4a2e-9bea-6b16fe23f0c5",
+    "TransactionNumber": "1680437312",
+    "TransactionDateTime": "{{TransactionDateTime}}",
+    "TransactionTypeCode": "RT",
+    "TransactionNetTotal": 120,
+    "CurrencyCode": "AUD",
+    "StoreCode": "P009",
+    "TransactionSourceCode": "ENABLER",
+    "ProgramCode": "REBEL",
+    "BrandOrgCode": "REBEL",
+    "JsonExternalData": {
+        "Temp_Ref_No": "31031016"
+    },
+    "TransactionDetails": [
+        {
+            "LineNumber": 1,
+            "ItemNumber": "58684703",
+            "ItemNumberTypeCode": "S",
+            "ItemTransactionTypeCode": "RT",
+            "Quantity": 1,
+            "DollarValueGross": 3,
+            "DollarValueNet": 3,
+            "DiscountAmount": 0,
+            "FullfillStoreCode": "P009",
+            "originalTransactionDateTime": "2023-01-22T06:08:28Z",
+            "originalStoreCode": "P009",
+            "originalTransactionNumber": "1674626909"
+        }
+    ],
+    "Tenders": [
+        {
+            "TenderCode": "CASH",
+            "TenderAmount": -27.5
+        }
+    ]
+}

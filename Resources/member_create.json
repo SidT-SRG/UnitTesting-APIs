@@ -1,0 +1,47 @@
+{
+    "FirstName": "FirstName",
+    "LastName": "LastName",
+    "Status": "A",
+    "Addresses": [
+        {
+            "AddressLine1": "319",
+            "AddressLine2": "COMMONWEALTH AVENUE",
+            "City": "Melbourne",
+            "StateCode": "VIC",
+            "CountryCode": "AU",
+            "PostalCode": "3000",
+            "ChannelCode": "DM",
+            "LocationCode": "H",
+            "IsPreferred": true
+        }
+    ],
+    "EMAILS": [
+        {
+            "EMAILADDRESS": "EMAILADDRESS",
+            "ChannelCode": "EM",
+            "LocationCode": "B",
+            "IsPreferred": true
+        }
+    ],
+    "PHONES": [
+        {
+            "PHONENUMBER": "PHONENUMBER",
+            "ChannelCode": "SM",
+            "LocationCode": "H",
+            "IsPreferred": true
+        }
+    ],
+    "SourceCode": "ENABLER",
+    "EnrollChannelCode": "INSTORE",
+    "JsonExternalData": {
+        "CustomAttributes": {
+            "CUSTOM_MKT_EMAIL_CONSENT": false,
+            "CUSTOM_MKT_SMS_CONSENT": true,
+            "CUSTOM_CRD_EMAIL_CONSENT":false,
+             "CUSTOM_CRD_SMS_CONSENT":true,
+            "IS_SUBSCRIPTION_CHANGED": true,
+            "CUSTOM_LAST_UPDATED_SOURCE": "POS"
+
+        }
+    }
+}
