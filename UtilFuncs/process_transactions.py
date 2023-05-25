@@ -12,7 +12,7 @@ def purchase_transactions(test_id, profile_id, temp_ref_no, redeem_response, ord
 
     transaction_num = int(datetime.now().timestamp())
     # Call the map certs API first
-    if map_transaction(profile_id, temp_ref_no, transaction_num):
+    if map_transaction(profile_id= profile_id, temp_ref_no=temp_ref_no, transaction_id=transaction_num):
         file.write(f"\nMap Certs API called. The {temp_ref_no} has been swapped with {transaction_num}\n")
 
     url = "https://u1srgl-pveapi.epsilonagilityloyalty.com/api/v2/transaction"
@@ -126,16 +126,23 @@ def split_order_total(order_total):
     item_val_3 = order_total - item_val_1 - item_val_2
     return [round(item_val_1, 2), round(item_val_2, 2), round(item_val_3, 2)]
 
-def map_transaction(profile_id, temp_ref_no, transaction_id):
+@dec_store_payloads(api_name="MapCerts")
+def map_transaction(**kwargs):
 
+    profile_id = kwargs.get('profile_id')
+    temp_ref_no = kwargs.get('temp_ref_no')
+    transaction_id = kwargs.get('transaction_id')
 
     url = "https://u1srgl-pveapi.epsilonagilityloyalty.com/api/v1/infrastructure/scripts/Swap_SFCC_OrderNo_TempRefNo_StandAlone/invoke"
 
-    payload = json.dumps({
+    dict_json = {
         "ProfileId": profile_id,
         "Temp_Ref_No": temp_ref_no,
         "OrderNumber": transaction_id
-    })
+    }
+
+    payload = json.dumps(dict_json)
+
     headers = {
         'Accept-Language': 'en-US',
         'Authorization': 'OAuth ' + get_token(),
@@ -146,8 +153,9 @@ def map_transaction(profile_id, temp_ref_no, transaction_id):
     response = requests.request("POST", url, headers=headers, data=payload)
 
     if response.status_code == 200:
-        return True
-    else: return False
+        return {"status": "Success", "request": dict_json, "response": response.json()}
+    else: 
+        return {"status": "Fail", "request": dict_json, "response": response.text}
 
 def return_transactions_full(test_id, profile_id, file):
 
@@ -271,7 +279,8 @@ def purchase_transactions_dec(**kwargs):
     transaction_num = int(datetime.now().timestamp())
 
     # Call the map certs API first - to swap the temp ref num with the transaction number
-    if map_transaction(profile_id, temp_ref_no, transaction_num):
+
+    if map_transaction(profile_id=profile_id, temp_ref_no=temp_ref_no, transaction_id=transaction_num)["status"] == {}:
         file.write(f"\nMap Certs API called. The {temp_ref_no} has been swapped with {transaction_num}\n")
 
     url = "https://u1srgl-pveapi.epsilonagilityloyalty.com/api/v2/transaction"

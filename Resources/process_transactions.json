@@ -9,9 +9,6 @@
     "TransactionSourceCode": "ENABLER",
     "ProgramCode": "REBEL",
     "BrandOrgCode": "REBEL",
-    "JsonExternalData": {
-        "Temp_Ref_No": "31031016"
-    },
     "TransactionDetails": [
         {
             "LineNumber": 1,
